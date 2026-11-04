@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.6.12'
     id 'maven-publish'
 }
 version = rootProject.version
@@ -11,6 +11,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation project(':common')
+}
+tasks.named('jar') {
+    dependsOn project(':common').tasks.named('classes')
+    from project(':common').sourceSets.main.output
 }
 processResources {
     inputs.property 'version', project.version
