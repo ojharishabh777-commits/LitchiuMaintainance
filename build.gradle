@@ -1,0 +1,7 @@
+plugins {
+    id 'base'
+}
+allprojects {
+    group = 'dev.litchiu'
+    version = '0.1.0-alpha'
+}

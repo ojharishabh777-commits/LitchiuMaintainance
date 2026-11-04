@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "litchiumaintenance",
+  "version": "${version}",
+  "name": "LitchiuMaintainance",
+  "description": "A modular maintenance and diagnostics toolkit for modded Minecraft servers.",
+  "authors": ["Litchiu"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.litchiu.maintainance.fabric.LitchiuMaintainance"],
+    "client": ["dev.litchiu.maintainance.fabric.client.LitchiuMaintainanceClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.18.2",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
