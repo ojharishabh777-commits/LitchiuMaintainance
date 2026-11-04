@@ -4,4 +4,9 @@ plugins {
 allprojects {
     group = 'dev.litchiu'
     version = rootProject.findProperty('mod_version') ?: '0.1.0-alpha'
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://libraries.minecraft.net/' }
+        mavenCentral()
+    }
 }
